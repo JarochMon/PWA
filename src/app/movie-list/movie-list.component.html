@@ -1,0 +1,13 @@
+<div class="movie-list">
+  <h1>Películas Populares</h1>
+  <div class="movies">
+    <div *ngFor="let movie of movies" class="movie-card">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+        alt="{{ movie.title }}"
+      />
+      <h3>{{ movie.title }}</h3>
+      <a [routerLink]="['/movie', movie.id]">Ver Detalles</a>
+    </div>
+  </div>
+</div>
